@@ -1,0 +1,27 @@
+<div class="panel panel-default">
+    <div class="panel-heading" role="tab" id="db_stuffWords" data-toggle="collapse" data-parent="#accordion" href="#collapseDB" aria-expanded="true" aria-controls="collapseDB" onclick="cTestO.db.flip();">
+      <h2 class="panel-title">
+				<div id="db_stuff_div" class="panel-title" style="visibility:visible;">
+					<strong>
+						<i id="db_stuff_caret" class="fa fa-caret-down fa-lg" style="color:black"></i><i style="color:blue;"><i id="dbtitle"> {{ db_stuff_title }}</i></i> 
+					</strong>&nbsp;
+				</div>
+      </h2>
+    </div>
+    <div id="collapseDB" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="db_stuffWords">
+			<div id='dbInput'>
+				<h2>
+					<i style="color:green;"><i > first name: </i></i> 
+					<input id="fName" type="text">
+					<i style="color:green;"><i > last name: </i></i> 
+					<input id="lName" type="text">
+					<input id="efl" type="button" value="press enter" v-on:click="elf_click">
+				</h2>
+			</div>
+			<div id='dbOutput'>
+				<h4 style="color:purple;">
+					<p id="dbJson"></p>
+				</h4>
+			</div>
+    </div>
+</div>

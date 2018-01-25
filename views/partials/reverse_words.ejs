@@ -1,0 +1,20 @@
+<div class="panel panel-default">
+	<div class="panel-heading" role="tab" id="reverseWords" data-toggle="collapse" data-parent="#accordion" href="#collapseSearch" aria-expanded="true" aria-controls="collapseSearch" onclick="cTestO.rev.flip();">
+		<h2 class="panel-title">
+			<div id="reverse_div" class="panel-title" style="visibility:visible;">
+				<strong>
+					<i id="reverse_caret" class="fa fa-caret-down fa-lg" style="color:black"></i><i style="color:blue;"><i id="rtitle"> {{ reverse_title }}</i></i> 
+				</strong>&nbsp;
+			</div>
+		</h2>
+	</div>
+	<div id="collapseSearch" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="reverseWords">
+		<div id='revInput'>
+			<h2>
+				<i style="color:green;"><i > enter text: </i></i> 
+				<input id="thisInput" type="text" v-on:keyup="reverseText">
+				<i style="color:purple;" id="input2">reverse text will appear here</i>
+			</h2>
+		</div>
+	</div>
+</div>

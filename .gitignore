@@ -1,0 +1,4 @@
+node_modules/*
+configs/*
+views/partials/head.ejs
+tc.log

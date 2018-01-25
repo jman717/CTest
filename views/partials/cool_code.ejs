@@ -1,0 +1,80 @@
+<div class="panel panel-default">
+    <div class="panel-heading" role="tab" id="cool_codeWords" data-toggle="collapse" data-parent="#accordion" href="#collapseCC" aria-expanded="true" aria-controls="collapseCC" onclick="cTestO.coolcode.flip();">
+      <h2 class="panel-title">
+				<div id="cool_code_div" class="panel-title" style="visibility:visible;">
+					<strong>
+						<i id="cool_code_caret" class="fa fa-caret-right fa-lg" style="color:black"></i><i style="color:blue;"><i id="cctitle"> {{ cool_code_title }}</i></i> 
+					</strong>&nbsp;
+				</div>
+      </h2>
+    </div>
+    <div id="collapseCC" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="cool_codeWords">
+			<h3>
+				<i style="color:green;">Below is the node code that runs this page. It's the first real world example of the npm package promise-toolkit-factory.</i> 
+			</h3>
+			<h5>
+				<textarea rows="15" cols="170">
+					switch(route){
+						case t.routes.getCTest:
+							t.log.act.setInput('get');
+							mp = t.getMainParams(req, res);
+							var f1 = require(t.factory_dir + '/carosh_test');
+							var f1o = new f1();
+							var toolkit = new ptf().appender('logging', {"type": "log4js-tagline", "log": t.log, "logger": t.logger})
+								.appender('vars', {"globals": mp})
+								.appender('classes', {"objs": [{"name": "f1o", "obj": f1o}]})
+								.appender('functions', {"flow": 1, "map": ["f1o.init", "f1o.render_page"]})
+								.appender('promises', {"flows":[1]})
+								.run();
+							break;
+						case t.routes.postUser:
+							t.log.act.setInput('post');
+							mp = t.getMainParams(req, res);
+							var f1 = require(t.factory_dir + '/carosh_test');
+							var f1o = new f1();
+							var toolkit = new ptf().appender('logging', {"type": "log4js-tagline", "log": t.log, "logger": t.logger})
+								.appender('vars', {"globals": mp})
+								.appender('classes', {"objs": [{"name": "f1o", "obj": f1o}]})
+								.appender('functions', {"flow": 1, "map": ["f1o.init", "f1o.insert_user"]})
+								.appender('promises', {"flows":[1]})
+								.run();
+							break;
+						default:
+							t.logger.error('no route is defined for (' + route + ')').tag(t.log.rte).tag(t.log.cli).tag(t.log.act).tag(t.log.lne).tagline();
+					}
+				</textarea>
+			</h5>
+			<h3>
+				<i style="color:green;">Another example is the output of the logging. Below is a sample</i> 
+			</h3>
+			<h5>
+				<textarea rows="15" cols="190">
+[2018-01-25T00:38:50.284] [DEBUG] ctest - route(/get/ctest) rte(/get/ctest) reqIP(::1) act(post) lne(processRoute(): helper/server.js:67:12)
+[2018-01-25T00:38:50.302] [TRACE] ctest - file loading=./lib/appenders/vars.js rte(/get/ctest) act(get) object(promise_toolkit_factory.appender) file(app.js)
+[2018-01-25T00:38:50.303] [TRACE] ctest - file loading=./lib/appenders/classes.js rte(/get/ctest) act(get) object(promise_toolkit_factory.appender) file(app.js)
+[2018-01-25T00:38:50.305] [INFO] ctest - checking class(f1o) typeof(object) rte(/get/ctest) act(get) object(classes.init) file(classes.js)
+[2018-01-25T00:38:50.305] [TRACE] ctest - file loading=./lib/appenders/functions.js rte(/get/ctest) act(get) object(promise_toolkit_factory.appender) file(app.js)
+[2018-01-25T00:38:50.306] [INFO] ctest - checking function(f1o.init) rte(/get/ctest) act(get) object(functions.init) file(functions.js)
+[2018-01-25T00:38:50.307] [TRACE] ctest - looking for class(f1o) rte(/get/ctest) act(get) object(promise_toolkit_factory.find_class) file(app.js)
+[2018-01-25T00:38:50.307] [DEBUG] ctest - function(f1o)=(f1o) confirmed rte(/get/ctest) act(get) object(functions.init) file(functions.js)
+[2018-01-25T00:38:50.307] [INFO] ctest - checking function(f1o.render_page) rte(/get/ctest) act(get) object(functions.init) file(functions.js)
+[2018-01-25T00:38:50.307] [TRACE] ctest - looking for class(f1o) rte(/get/ctest) act(get) object(promise_toolkit_factory.find_class) file(app.js)
+[2018-01-25T00:38:50.308] [DEBUG] ctest - function(f1o)=(f1o) confirmed rte(/get/ctest) act(get) object(functions.init) file(functions.js)
+[2018-01-25T00:38:50.309] [TRACE] ctest - file loading=./lib/appenders/promises.js rte(/get/ctest) act(get) object(promise_toolkit_factory.appender) file(app.js)
+[2018-01-25T00:38:50.310] [TRACE] ctest - run() rte(/get/ctest) act(get) object(promise_toolkit_factory.run) file(app.js)
+[2018-01-25T00:38:50.311] [DEBUG] ctest - run these flows conf({"flows":[1]}) rte(/get/ctest) act(get) object(promises.run) file(promises.js)
+[2018-01-25T00:38:50.414] [DEBUG] ctest - process jo={"flow":1} rte(/get/ctest) act(get) object(promises.process) file(promises.js)
+[2018-01-25T00:38:50.416] [DEBUG] ctest - process flow=1 rte(/get/ctest) act(get) object(promises.process) file(promises.js)
+[2018-01-25T00:38:50.416] [TRACE] ctest - run() rte(/get/ctest) act(get) object(promise_toolkit_factory.getFlowAppender) file(app.js)
+[2018-01-25T00:38:50.520] [DEBUG] ctest - process_function flow(1) jo({"flow":1,"funcName":"f1o.init","funcANum":0}) rte(/get/ctest) act(get) object(promises.process) file(promises.js)
+[2018-01-25T00:38:50.521] [TRACE] ctest - run() rte(/get/ctest) act(get) object(promise_toolkit_factory.getFlowAppender) file(app.js)
+[2018-01-25T00:38:50.521] [DEBUG] ctest - debug 10.00 rte(/get/ctest) act(get) object(carosh_test.init) file(carosh_test.js)
+[2018-01-25T00:38:50.522] [DEBUG] ctest - process_function flow(1) jo({"flow":1,"funcName":"f1o.render_page","funcANum":1}) rte(/get/ctest) act(get) object(promises.process) file(promises.js)
+[2018-01-25T00:38:50.523] [TRACE] ctest - run() rte(/get/ctest) act(get) object(promise_toolkit_factory.getFlowAppender) file(app.js)
+[2018-01-25T00:38:50.523] [TRACE] ctest - run() rte(/get/ctest) act(get) object(promise_toolkit_factory.getVars) file(app.js)
+[2018-01-25T00:38:50.523] [DEBUG] ctest - debug 10.00 rte(/get/ctest) act(get) object(carosh_test.render_page) file(carosh_test.js)
+[2018-01-25T00:38:50.542] [DEBUG] ctest - values=["success flow(1)","success flow(1)"] rte(/get/ctest) act(get) object(promises.process) file(promises.js)
+				</textarea>
+			</h5>
+    </div>
+</div>

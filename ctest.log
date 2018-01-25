@@ -1,0 +1,33 @@
+[2018-01-25T00:41:52.840] [DEBUG] ctest - sql connection pool ok={"server":"localhost","host":"localhost","dbname":"ctest","user":"root","password":".-0P~[!v","port":3306} rte(/) lne(connect(): lib/mysql_object.js:32:13)
+[2018-01-25T00:41:52.856] [INFO] ctest - Log file has been flushed clean.
+[2018-01-25T00:41:52.856] [TRACE] ctest - Entering cheese testing
+[2018-01-25T00:41:52.857] [DEBUG] ctest - Got cheese.
+[2018-01-25T00:41:52.857] [INFO] ctest - Cheese is Gouda.
+[2018-01-25T00:41:52.857] [WARN] ctest - Cheese is quite smelly.
+[2018-01-25T00:41:52.857] [ERROR] ctest - Cheese is too ripe!
+[2018-01-25T00:41:52.857] [FATAL] ctest - Cheese was breeding ground for listeria.
+[2018-01-25T00:41:57.557] [DEBUG] ctest - route(/get/ctest) rte(/get/ctest) reqIP(::1) act(post) lne(processRoute(): helper/server.js:67:12)
+[2018-01-25T00:41:57.567] [TRACE] ctest - file loading=./lib/appenders/vars.js rte(/get/ctest) act(get) object(promise_toolkit_factory.appender) file(app.js)
+[2018-01-25T00:41:57.568] [TRACE] ctest - file loading=./lib/appenders/classes.js rte(/get/ctest) act(get) object(promise_toolkit_factory.appender) file(app.js)
+[2018-01-25T00:41:57.571] [INFO] ctest - checking class(f1o) typeof(object) rte(/get/ctest) act(get) object(classes.init) file(classes.js)
+[2018-01-25T00:41:57.571] [TRACE] ctest - file loading=./lib/appenders/functions.js rte(/get/ctest) act(get) object(promise_toolkit_factory.appender) file(app.js)
+[2018-01-25T00:41:57.574] [INFO] ctest - checking function(f1o.init) rte(/get/ctest) act(get) object(functions.init) file(functions.js)
+[2018-01-25T00:41:57.575] [TRACE] ctest - looking for class(f1o) rte(/get/ctest) act(get) object(promise_toolkit_factory.find_class) file(app.js)
+[2018-01-25T00:41:57.575] [DEBUG] ctest - function(f1o)=(f1o) confirmed rte(/get/ctest) act(get) object(functions.init) file(functions.js)
+[2018-01-25T00:41:57.575] [INFO] ctest - checking function(f1o.render_page) rte(/get/ctest) act(get) object(functions.init) file(functions.js)
+[2018-01-25T00:41:57.575] [TRACE] ctest - looking for class(f1o) rte(/get/ctest) act(get) object(promise_toolkit_factory.find_class) file(app.js)
+[2018-01-25T00:41:57.576] [DEBUG] ctest - function(f1o)=(f1o) confirmed rte(/get/ctest) act(get) object(functions.init) file(functions.js)
+[2018-01-25T00:41:57.576] [TRACE] ctest - file loading=./lib/appenders/promises.js rte(/get/ctest) act(get) object(promise_toolkit_factory.appender) file(app.js)
+[2018-01-25T00:41:57.578] [TRACE] ctest - run() rte(/get/ctest) act(get) object(promise_toolkit_factory.run) file(app.js)
+[2018-01-25T00:41:57.579] [DEBUG] ctest - run these flows conf({"flows":[1]}) rte(/get/ctest) act(get) object(promises.run) file(promises.js)
+[2018-01-25T00:41:57.681] [DEBUG] ctest - process jo={"flow":1} rte(/get/ctest) act(get) object(promises.process) file(promises.js)
+[2018-01-25T00:41:57.683] [DEBUG] ctest - process flow=1 rte(/get/ctest) act(get) object(promises.process) file(promises.js)
+[2018-01-25T00:41:57.683] [TRACE] ctest - run() rte(/get/ctest) act(get) object(promise_toolkit_factory.getFlowAppender) file(app.js)
+[2018-01-25T00:41:57.790] [DEBUG] ctest - process_function flow(1) jo({"flow":1,"funcName":"f1o.init","funcANum":0}) rte(/get/ctest) act(get) object(promises.process) file(promises.js)
+[2018-01-25T00:41:57.791] [TRACE] ctest - run() rte(/get/ctest) act(get) object(promise_toolkit_factory.getFlowAppender) file(app.js)
+[2018-01-25T00:41:57.792] [DEBUG] ctest - debug 10.00 rte(/get/ctest) act(get) object(carosh_test.init) file(carosh_test.js)
+[2018-01-25T00:41:57.794] [DEBUG] ctest - process_function flow(1) jo({"flow":1,"funcName":"f1o.render_page","funcANum":1}) rte(/get/ctest) act(get) object(promises.process) file(promises.js)
+[2018-01-25T00:41:57.795] [TRACE] ctest - run() rte(/get/ctest) act(get) object(promise_toolkit_factory.getFlowAppender) file(app.js)
+[2018-01-25T00:41:57.797] [TRACE] ctest - run() rte(/get/ctest) act(get) object(promise_toolkit_factory.getVars) file(app.js)
+[2018-01-25T00:41:57.797] [DEBUG] ctest - debug 10.00 rte(/get/ctest) act(get) object(carosh_test.render_page) file(carosh_test.js)
+[2018-01-25T00:41:57.844] [DEBUG] ctest - values=["success flow(1)","success flow(1)"] rte(/get/ctest) act(get) object(promises.process) file(promises.js)
