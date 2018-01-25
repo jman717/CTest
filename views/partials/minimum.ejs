@@ -1,0 +1,23 @@
+<div class="panel panel-default">
+    <div class="panel-heading" role="tab" id="minimumWords" data-toggle="collapse" data-parent="#accordion" href="#collapseMIN" aria-expanded="true" aria-controls="collapseMIN" onclick="cTestO.minimum.flip();">
+      <h2 class="panel-title">
+				<div id="minimum_div" class="panel-title" style="visibility:visible;">
+					<strong>
+						<i id="minimum_caret" class="fa fa-caret-down fa-lg" style="color:black"></i><i style="color:blue;"><i id="mintitle"> {{ minimum_title }}</i></i> 
+					</strong>&nbsp;
+				</div>
+      </h2>
+    </div>
+    <div id="collapseMIN" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="minimumWords">
+			<div id='minInput'>
+				<h2>
+					<input type="button" value="press enter" v-on:click="min_click">
+				</h2>
+			</div>
+			<div id='minOutput'>
+				<h4 style="color:purple;">
+					<p id="minJson"></p>
+				</h4>
+			</div>
+    </div>
+</div>

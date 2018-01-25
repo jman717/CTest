@@ -5,6 +5,9 @@ class cTest{
 		t.rev = new reverse();
 		t.db = new dbStuff();
 		t.coolcode = new coolCode();
+		t.lastname = new lastName();
+		t.rolesassigned = new rolesAssigned();
+		t.minimum = new minimum();
 	}
 };
 
@@ -116,7 +119,117 @@ class dbStuff extends bar{
 							contentType: "application/json; charset=utf-8",
 							success: function(data) { 
 								document.getElementById('dbJson').innerHTML = 'json output of users table: ' + JSON.stringify(data);
-								alert('got data='+data);
+							},
+							error  : function()     { alert('data error');}
+						});
+					}
+				}
+		});		
+	}
+	
+	on_open(){
+		//alert(t.caret + ' open');
+	}	
+}
+
+class lastName extends bar{
+	constructor(){
+		super();
+		var t = this;
+		t.name = 'last_name';
+		t.caret = t.name+'_caret';
+		new Vue({
+			el: '#lntitle',
+			data: {
+				last_name_title: 'last name "Smith"'
+			}
+		});		
+		
+		new Vue({
+				el:'#lnInput',
+				methods: {
+					ln_click: function (event){
+						var xURL = '/get/smith';
+						$.ajax(xURL, {
+							type: 'GET',
+							datatype: 'json',
+							contentType: "application/json; charset=utf-8",
+							success: function(data) { 
+								document.getElementById('lnJson').innerHTML = 'json output of user "Smith": ' + JSON.stringify(data);
+							},
+							error  : function()     { alert('data error');}
+						});
+					}
+				}
+		});		
+	}
+	
+	on_open(){
+		//alert(t.caret + ' open');
+	}	
+}
+
+class rolesAssigned extends bar{
+	constructor(){
+		super();
+		var t = this;
+		t.name = 'roles_assigned';
+		t.caret = t.name+'_caret';
+		new Vue({
+			el: '#ratitle',
+			data: {
+				roles_assigned_title: 'roles assigned'
+			}
+		});		
+		
+		new Vue({
+				el:'#raInput',
+				methods: {
+					ra_click: function (event){
+						var xURL = '/get/roles';
+						$.ajax(xURL, {
+							type: 'GET',
+							datatype: 'json',
+							contentType: "application/json; charset=utf-8",
+							success: function(data) { 
+								document.getElementById('raJson').innerHTML = 'json output of roles assigned: ' + JSON.stringify(data);
+							},
+							error  : function()     { alert('data error');}
+						});
+					}
+				}
+		});		
+	}
+	
+	on_open(){
+		//alert(t.caret + ' open');
+	}	
+}
+
+class minimum extends bar{
+	constructor(){
+		super();
+		var t = this;
+		t.name = 'minimum';
+		t.caret = t.name+'_caret';
+		new Vue({
+			el: '#mintitle',
+			data: {
+				minimum_title: 'minimum of 5 users per role'
+			}
+		});		
+		
+		new Vue({
+				el:'#minInput',
+				methods: {
+					min_click: function (event){
+						var xURL = '/get/minimum';
+						$.ajax(xURL, {
+							type: 'GET',
+							datatype: 'json',
+							contentType: "application/json; charset=utf-8",
+							success: function(data) { 
+								document.getElementById('minJson').innerHTML = 'json output of roles: ' + JSON.stringify(data);
 							},
 							error  : function()     { alert('data error');}
 						});
@@ -146,7 +259,7 @@ class coolCode extends bar{
 	
 	on_open(){
 		var t = this;
-		document.getElementById('ccHere').innerHTML = 'json output of users table: ';
+		//document.getElementById('ccHere').innerHTML = 'json output of users table: ';
 	}	
 };
 

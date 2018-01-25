@@ -24,6 +24,9 @@ app.use(bodyParser.json());
 app.use(express.static(__dirname + '/public'));
 
 app.get(hso.routes.getCTest, hso.processRoute);
+app.get(hso.routes.getSmith, hso.processRoute);
+app.get(hso.routes.getRoles, hso.processRoute);
+app.get(hso.routes.getMinimum, hso.processRoute);
 app.post(hso.routes.postUser, hso.processRoute);
 
 app.use("/",router);

@@ -1,0 +1,23 @@
+<div class="panel panel-default">
+    <div class="panel-heading" role="tab" id="roles_assignedWords" data-toggle="collapse" data-parent="#accordion" href="#collapseRA" aria-expanded="true" aria-controls="collapseRA" onclick="cTestO.rolesassigned.flip();">
+      <h2 class="panel-title">
+				<div id="roles_assigned_div" class="panel-title" style="visibility:visible;">
+					<strong>
+						<i id="roles_assigned_caret" class="fa fa-caret-down fa-lg" style="color:black"></i><i style="color:blue;"><i id="ratitle"> {{ roles_assigned_title }}</i></i> 
+					</strong>&nbsp;
+				</div>
+      </h2>
+    </div>
+    <div id="collapseRA" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="roles_assignedWords">
+			<div id='raInput'>
+				<h2>
+					<input id="efl" type="button" value="press enter" v-on:click="ra_click">
+				</h2>
+			</div>
+			<div id='raOutput'>
+				<h4 style="color:purple;">
+					<p id="raJson"></p>
+				</h4>
+			</div>
+    </div>
+</div>
